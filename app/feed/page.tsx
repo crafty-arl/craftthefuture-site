@@ -7,8 +7,9 @@ import { SiteFooter } from "@/components/layout/site-footer"
 import { TagCloud } from "@/components/tag-cloud"
 import { SourceSelector } from "@/components/source-selector"
 import { RSS_SOURCES } from "@/lib/rss-sources"
+import { RefreshButton } from "@/components/refresh-button"
 
-export const revalidate = 3600 // Revalidate every hour
+export const revalidate = 0 // Disable caching to always fetch fresh content
 
 interface FeedPageProps {
   searchParams: { [key: string]: string | string[] | undefined }
@@ -31,6 +32,7 @@ export default async function FeedPage({ searchParams }: FeedPageProps) {
           <h1 className="text-4xl md:text-5xl font-bold">Feed</h1>
           <div className="flex items-center gap-4">
             <SourceSelector />
+            <RefreshButton />
             <div className="flex items-center text-sm">
               <CalendarDays size={16} className="mr-2" />
               <span>Latest updates</span>
@@ -39,7 +41,13 @@ export default async function FeedPage({ searchParams }: FeedPageProps) {
         </div>
 
         <div className="mb-8">
+          <p className="text-xl text-center mb-4">
+            Try our interactive CLI to explore our content. Type commands like <code className="bg-gray-100 px-2 py-1 rounded">help</code> or <code className="bg-gray-100 px-2 py-1 rounded">latest</code> to get started.
+          </p>
           <FeedCli feedItems={feedItems} />
+          <p className="text-center mt-4 text-gray-600">
+            Want to use the CLI in your terminal? Check out our <a href="https://github.com/craftthefuture/cli" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">GitHub repository</a> to get started.
+          </p>
         </div>
 
         <h2 className="text-2xl font-bold mb-4">Popular Tags</h2>

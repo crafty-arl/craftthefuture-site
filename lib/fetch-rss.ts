@@ -73,8 +73,15 @@ const MOCK_FEED_ITEMS: FeedItem[] = [
 // Update the fetchRssFeed function to handle multiple sources
 export async function fetchRssFeed(sourceId?: string): Promise<FeedItem[]> {
   try {
-    const response = await fetch("https://buildbycraftthefuture.substack.com/feed", {
-      next: { revalidate: 3600 }, // Revalidate every hour
+    // Add cache-busting parameter and proper cache control headers
+    const timestamp = new Date().getTime()
+    const response = await fetch(`https://buildbycraftthefuture.substack.com/feed?_=${timestamp}`, {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+      }
     })
     
     if (!response.ok) {

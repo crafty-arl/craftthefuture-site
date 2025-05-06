@@ -2,6 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { CliAnimation } from "@/components/cli-animation"
 import { SiteFooter } from "@/components/layout/site-footer"
+import { RefreshButton } from "@/components/refresh-button"
+
+export const revalidate = 0 // Disable caching to always fetch fresh content
 
 export default function Home() {
   return (
@@ -17,7 +20,8 @@ export default function Home() {
             priority
           />
         </Link>
-        <nav className="flex gap-6 justify-end">
+        <nav className="flex gap-6 justify-end items-center">
+          <RefreshButton />
           <Link href="/about" className="hover:underline">
             About
           </Link>
@@ -46,6 +50,9 @@ export default function Home() {
         {/* CLI Animation */}
         <div className="my-8">
           <CliAnimation />
+          <p className="text-center mt-4 text-gray-600">
+            Try our interactive CLI in the <Link href="/feed" className="underline hover:text-black">Feed</Link> or <Link href="/cli" className="underline hover:text-black">CLI Browser</Link> to explore our content.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">

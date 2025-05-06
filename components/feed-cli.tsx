@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useEffect, useRef, type KeyboardEvent } from "react"
+import { useState, useEffect, useRef, type KeyboardEvent, Suspense } from "react"
 import { ChevronRight } from "lucide-react"
 import { useRouter } from "next/navigation"
 import type { FeedItem } from "@/lib/fetch-rss"
@@ -39,6 +39,14 @@ type CommandSuggestion = {
 }
 
 export function FeedCli({ feedItems }: FeedCliProps) {
+  return (
+    <Suspense fallback={<div>Loading router...</div>}>
+      <FeedCliContent feedItems={feedItems} />
+    </Suspense>
+  )
+}
+
+function FeedCliContent({ feedItems }: FeedCliProps) {
   const router = useRouter()
   const [commands, setCommands] = useState<Command[]>([])
   const [currentInput, setCurrentInput] = useState("")

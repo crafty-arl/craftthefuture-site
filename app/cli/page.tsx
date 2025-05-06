@@ -5,8 +5,18 @@ import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { TagCloud } from "@/components/tag-cloud"
 import { SourceSelector } from "@/components/source-selector"
+import { Suspense } from "react"
 
 export const revalidate = 3600 // Revalidate every hour
+
+// Client-side wrapper component
+function CliWrapper({ feedItems }: { feedItems: any[] }) {
+  return (
+    <Suspense fallback={<div>Loading CLI...</div>}>
+      <FeedCli feedItems={feedItems} />
+    </Suspense>
+  )
+}
 
 export default async function CliPage() {
   // Fetch all feed items
@@ -30,7 +40,7 @@ export default async function CliPage() {
         </div>
 
         <div className="mb-8">
-          <FeedCli feedItems={feedItems} />
+          <CliWrapper feedItems={feedItems} />
         </div>
 
         <h2 className="text-2xl font-bold mb-4">Popular Tags</h2>

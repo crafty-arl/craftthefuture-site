@@ -64,9 +64,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound()
   }
 
-  const categoryPath = `/${categorySlug}`
   const allPosts = await fetchRssFeed()
-  const categoryPosts = allPosts.filter((post) => post.category.toLowerCase() === categoryPath)
+  const categoryPosts = allPosts.filter((post) => 
+    post.tags.some(tag => tag.toLowerCase() === categorySlug.toLowerCase())
+  )
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
@@ -96,7 +97,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             categoryPosts.map((post) => (
               <article key={post.id} className="border-b border-black pb-10 last:border-b-0">
                 <div className="flex items-center gap-4 mb-2">
-                  <span className="text-sm font-medium">{post.category}</span>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span key={tag} className="text-sm font-medium bg-gray-100 px-2 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <CalendarDays size={16} className="mr-1" />
                     {post.date}

@@ -18,6 +18,15 @@ function CliWrapper({ feedItems }: { feedItems: any[] }) {
   )
 }
 
+// Source selector wrapper
+function SourceSelectorWrapper() {
+  return (
+    <Suspense fallback={<div>Loading sources...</div>}>
+      <SourceSelector />
+    </Suspense>
+  )
+}
+
 export default async function CliPage() {
   // Fetch all feed items
   const feedItems = await fetchRssFeed()
@@ -31,7 +40,7 @@ export default async function CliPage() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold">CLI Browser</h1>
           <div className="flex items-center gap-4">
-            <SourceSelector />
+            <SourceSelectorWrapper />
             <div className="flex items-center text-sm">
               <CalendarDays size={16} className="mr-2" />
               <span>Latest updates</span>

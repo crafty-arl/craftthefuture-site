@@ -51,7 +51,7 @@ export function SiteHeader() {
             Subscribe
           </a>
           <Button 
-            className="ml-4 bg-black text-white hover:bg-gray-800"
+            className="ml-4 bg-green-600 text-white hover:bg-green-700"
             onClick={() => window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')}
           >
             Hire Us
@@ -88,7 +88,7 @@ export function SiteHeader() {
           </a>
           <div className="p-4 border-b border-black">
             <Button 
-              className="w-full bg-black text-white hover:bg-gray-800"
+              className="w-full bg-green-600 text-white hover:bg-green-700"
               onClick={() => {
                 setMobileMenuOpen(false)
                 window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')

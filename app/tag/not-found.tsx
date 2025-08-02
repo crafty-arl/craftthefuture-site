@@ -1,11 +1,11 @@
 import Link from "next/link"
-import { SiteHeader } from "@/components/layout/site-header"
+
 import { SiteFooter } from "@/components/layout/site-footer"
 
 export default function TagNotFound() {
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      <SiteHeader />
+
 
       <div className="flex-1 flex flex-col items-center justify-center p-6 md:p-12 text-center">
         <h1 className="text-6xl font-bold mb-6">404</h1>

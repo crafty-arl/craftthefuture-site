@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { SiteHeader } from "@/components/layout/site-header"
+
 import { SiteFooter } from "@/components/layout/site-footer"
 import { fetchRssFeed } from "@/lib/fetch-rss"
 import { TagCloud } from "@/components/tag-cloud"
@@ -42,7 +42,7 @@ export default async function TagsPage() {
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      <SiteHeader />
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6 md:p-12">

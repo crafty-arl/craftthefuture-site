@@ -37,28 +37,7 @@ export default function About() {
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      {/* Header */}
-      <header className="flex justify-between items-center p-6 border-b border-black">
-        <Link href="/" className="font-bold text-lg tracking-tight hover:underline">
-          CRAFT THE FUTURE
-        </Link>
-        <nav className="flex gap-6">
-          <Link href="/about" className="font-bold">
-            About
-          </Link>
-          <Link href="/feed" className="hover:underline">
-            Feed
-          </Link>
-          <a
-            href="https://craftthefuture.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Subscribe
-          </a>
-        </nav>
-      </header>
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6 md:p-12">

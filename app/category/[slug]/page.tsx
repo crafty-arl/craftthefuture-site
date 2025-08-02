@@ -2,7 +2,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { CalendarDays, ArrowLeft } from "lucide-react"
 import { fetchRssFeed } from "@/lib/fetch-rss"
-import { SiteHeader } from "@/components/layout/site-header"
+
 import { SiteFooter } from "@/components/layout/site-footer"
 import type { Metadata } from "next"
 
@@ -71,7 +71,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      <SiteHeader />
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6 md:p-12">

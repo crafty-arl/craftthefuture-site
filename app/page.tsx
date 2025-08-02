@@ -2,42 +2,14 @@ import Link from "next/link"
 import Image from "next/image"
 import { CliAnimation } from "@/components/cli-animation"
 import { SiteFooter } from "@/components/layout/site-footer"
-import { RefreshButton } from "@/components/refresh-button"
+
 
 export const revalidate = 0 // Disable caching to always fetch fresh content
 
 export default function Home() {
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      {/* Header */}
-      <header className="grid grid-cols-1 md:grid-cols-2 items-center p-6 border-b border-black">
-        <Link href="/" className="hover:opacity-90 transition-opacity">
-          <Image
-            src="/ctf-logo.png"
-            alt="Craft The Future"
-            width={75}
-            height={20}
-            priority
-          />
-        </Link>
-        <nav className="flex gap-6 justify-end items-center">
-          <RefreshButton />
-          <Link href="/about" className="hover:underline">
-            About
-          </Link>
-          <Link href="/feed" className="hover:underline">
-            Feed
-          </Link>
-          <a
-            href="https://buildbycraftthefuture.substack.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            Subscribe
-          </a>
-        </nav>
-      </header>
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6">

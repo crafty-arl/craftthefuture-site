@@ -5,6 +5,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu } from "lucide-react"
 import { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 export function SiteHeader() {
   const pathname = usePathname()
@@ -23,7 +24,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-black">
-      <div className="flex justify-between items-center p-6">
+      <div className="max-w-4xl mx-auto w-full flex justify-between items-center p-6">
         <Link href="/" className="hover:opacity-90 transition-opacity">
           <Image
             src="/ctf-logo.png"
@@ -35,7 +36,7 @@ export function SiteHeader() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6">
+        <nav className="hidden md:flex gap-6 items-center">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className={pathname === item.href ? "font-bold" : "hover:underline"}>
               {item.label}
@@ -49,6 +50,12 @@ export function SiteHeader() {
           >
             Subscribe
           </a>
+          <Button 
+            className="ml-4 bg-black text-white hover:bg-gray-800"
+            onClick={() => window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')}
+          >
+            Hire Us
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -79,6 +86,17 @@ export function SiteHeader() {
           >
             Subscribe
           </a>
+          <div className="p-4 border-b border-black">
+            <Button 
+              className="w-full bg-black text-white hover:bg-gray-800"
+              onClick={() => {
+                setMobileMenuOpen(false)
+                window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')
+              }}
+            >
+              Hire Us
+            </Button>
+          </div>
         </nav>
       )}
     </header>

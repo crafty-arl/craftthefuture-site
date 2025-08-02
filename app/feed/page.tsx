@@ -2,7 +2,7 @@ import { CalendarDays } from "lucide-react"
 import Link from "next/link"
 import { FeedCli } from "@/components/feed-cli"
 import { fetchRssFeed } from "@/lib/fetch-rss"
-import { SiteHeader } from "@/components/layout/site-header"
+
 import { SiteFooter } from "@/components/layout/site-footer"
 import { TagCloud } from "@/components/tag-cloud"
 import { SourceSelector } from "@/components/source-selector"
@@ -24,7 +24,7 @@ export default async function FeedPage({ searchParams }: FeedPageProps) {
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      <SiteHeader />
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6 md:p-12">

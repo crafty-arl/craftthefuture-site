@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { SiteHeader } from "@/components/layout/site-header"
+
 import { SiteFooter } from "@/components/layout/site-footer"
 import { RSS_SOURCES } from "@/lib/rss-sources"
 import { fetchRssFeed } from "@/lib/fetch-rss"
@@ -22,7 +22,7 @@ export default async function SourcesPage() {
 
   return (
     <main className="flex-1 flex flex-col max-w-4xl mx-auto border border-black w-full">
-      <SiteHeader />
+
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col p-6 md:p-12">

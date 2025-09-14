@@ -20,6 +20,7 @@ export function SiteHeader() {
     { href: "/feed", label: "Feed" },
     { href: "/tags", label: "Tags" },
     { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
   ]
 
   return (
@@ -50,12 +51,11 @@ export function SiteHeader() {
           >
             Subscribe
           </a>
-          <Button 
-            className="ml-4 bg-green-600 text-white hover:bg-green-700"
-            onClick={() => window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')}
-          >
-            Hire Us
-          </Button>
+          <Link href="/services">
+            <Button className="ml-4 bg-green-600 text-white hover:bg-green-700">
+              Hire Us
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -86,17 +86,15 @@ export function SiteHeader() {
           >
             Subscribe
           </a>
-          <div className="p-4 border-b border-black">
-            <Button 
-              className="w-full bg-green-600 text-white hover:bg-green-700"
-              onClick={() => {
-                setMobileMenuOpen(false)
-                window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')
-              }}
-            >
+          <Link
+            href="/services"
+            className="block p-4 hover:bg-gray-50 border-b border-black"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <Button className="w-full bg-green-600 text-white hover:bg-green-700">
               Hire Us
             </Button>
-          </div>
+          </Link>
         </nav>
       )}
     </header>

@@ -87,6 +87,7 @@ export function InteractiveCli() {
           { text: "  craft build      - Access technical insights and devlogs" },
           { text: "  craft govern     - Explore systems and ethics content" },
           { text: "  craft dream      - Discover stories and speculative visions" },
+          { text: "  craft tools      - Launch Season 0 AI tools" },
           { text: "  craft subscribe  - Subscribe to The Future Stack newsletter" },
           { text: "  craft clear      - Clear the terminal" },
           { text: "  craft feed       - Browse the content feed", isLink: true, href: "/feed" },
@@ -154,6 +155,62 @@ export function InteractiveCli() {
           },
           { text: "Type 'craft topics' to see all /dream topics" },
         ]
+      } else if (commandBody === "tools") {
+        commandOutput = [
+          { text: "🚀 Season 0 AI Tools - Now Live!" },
+          { text: "Launch our suite of AI-powered creative tools:" },
+          {
+            text: "→ PostGen - Generate platform-specific content ideas",
+            isLink: true,
+            href: "https://postgen.craftthefuture.xyz",
+          },
+          {
+            text: "→ MemeGen - Create viral meme captions",
+            isLink: true,
+            href: "https://memegen.craftthefuture.xyz",
+          },
+          {
+            text: "→ VibeScan - Analyze content tone & get rewrites",
+            isLink: true,
+            href: "https://vibescan.craftthefuture.xyz",
+          },
+          {
+            text: "→ HookGen - Generate engaging hooks in 25 tones",
+            isLink: true,
+            href: "https://hookgen.craftthefuture.xyz",
+          },
+          { text: "Type 'craft tools [name]' to launch a specific tool" },
+          { text: "Or visit the Season 0 page", isLink: true, href: "/season-0" },
+        ]
+      } else if (commandBody.startsWith("tools ")) {
+        const toolName = commandBody.substring(6).toLowerCase().trim()
+        const tools = {
+          "postgen": { name: "PostGen", url: "https://postgen.craftthefuture.xyz", description: "Content ideas generator" },
+          "memegen": { name: "MemeGen", url: "https://memegen.craftthefuture.xyz", description: "Meme caption generator" },
+          "vibescan": { name: "VibeScan", url: "https://vibescan.craftthefuture.xyz", description: "Tone analysis tool" },
+          "hookgen": { name: "HookGen", url: "https://hookgen.craftthefuture.xyz", description: "Hook generator" },
+        }
+        
+        const tool = tools[toolName as keyof typeof tools]
+        if (tool) {
+          commandOutput = [
+            { text: `🚀 Launching ${tool.name}...` },
+            { text: tool.description },
+            {
+              text: `→ Open ${tool.name}`,
+              isLink: true,
+              href: tool.url,
+            },
+            { text: "Tool will open in a new tab" },
+          ]
+        } else {
+          commandOutput = [
+            { text: `Tool "${toolName}" not found.` },
+            { text: "Available tools: postgen, memegen, vibescan, hookgen" },
+            { text: "Type 'craft tools' to see all tools" },
+          ]
+          isError = true
+        }
       } else if (commandBody === "subscribe") {
         commandOutput = [
           { text: "Opening subscription options..." },

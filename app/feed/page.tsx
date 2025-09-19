@@ -64,7 +64,7 @@ export default async function FeedPage({ searchParams }: FeedPageProps) {
           </div>
           
           <p className="text-xl text-center mb-4">
-            Try our interactive CLI to explore our content. Type commands like <code className="bg-gray-100 px-2 py-1 rounded">help</code> or <code className="bg-gray-100 px-2 py-1 rounded">latest</code> to get started.
+            Try our interactive CLI to explore our content. Type commands like <code className="bg-gray-100 px-2 py-1 rounded">help</code>, <code className="bg-gray-100 px-2 py-1 rounded">tools</code>, or <code className="bg-gray-100 px-2 py-1 rounded">latest</code> to get started.
           </p>
           <FeedCli feedItems={feedItems} />
           <p className="text-center mt-4 text-gray-600">

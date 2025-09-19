@@ -63,7 +63,8 @@ export default function Services() {
       client: "Mitobyte Activation for Midwest",
       challenge: "Building awareness and engagement for Wisconsin Tech Month and community events like Code and Coffee and Code and Brew across the Midwest",
       solution: "Developed comprehensive content strategy including blog posts highlighting WI Tech Month activities, targeted email marketing campaigns for event promotion, and active social media engagement to drive attendance to Code and Coffee and Code and Brew events",
-      result: "Successfully amplified Wisconsin Tech Month visibility and increased attendance at community events, establishing stronger tech community connections across the Midwest region"
+      result: "Successfully amplified Wisconsin Tech Month visibility and increased attendance at community events, establishing stronger tech community connections across the Midwest region",
+      link: "/case-studies/mitobyte-midwest-activation"
     }
   ]
 
@@ -105,7 +106,17 @@ export default function Services() {
           <div className="space-y-8 mb-12">
             {caseStudies.map((study, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold mb-2">{study.client}</h3>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-lg font-semibold">{study.client}</h3>
+                  {study.link && (
+                    <Link 
+                      href={study.link}
+                      className="text-sm text-green-600 hover:text-green-700 font-medium"
+                    >
+                      Read Full Case Study →
+                    </Link>
+                  )}
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div>
                     <h4 className="font-semibold mb-1">Challenge:</h4>
@@ -124,31 +135,36 @@ export default function Services() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold mt-12 mb-6">Ready to Get Started?</h2>
-          <div className="bg-gray-50 p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mt-12 mb-6">🚀 Ready to Transform Your Content?</h2>
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-xl border-2 border-green-200">
             <div className="max-w-2xl mx-auto text-center">
-              <h3 className="text-2xl font-semibold mb-4">Let's Build Something Together</h3>
-              <p className="text-gray-700 mb-6">
-                Book a free 30-minute consultation to discuss your project and how we can help 
-                you tell better stories about your technology.
+              <h3 className="text-3xl font-bold mb-4">Let's Build Something Amazing Together</h3>
+              <p className="text-lg text-gray-700 mb-6">
+                <strong>Book a FREE 30-minute consultation</strong> to discuss your project and discover how we can help 
+                you tell better stories about your technology and 10x your content impact.
               </p>
+              <div className="bg-white p-4 rounded-lg border-2 border-green-200 mb-6">
+                <p className="text-green-800 font-semibold">
+                  ⚡ Limited spots available this month - Book now to secure your consultation
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  className="bg-green-600 text-white hover:bg-green-700 px-8 py-3"
+                  className="bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 px-8 py-4 text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => window.open('https://cal.com/0xgmcarl', 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes')}
                 >
-                  Book Free Consultation
+                  🎯 Book FREE Consultation →
                 </Button>
                 <Button 
                   variant="outline" 
-                  className="px-8 py-3"
+                  className="px-8 py-4 text-lg font-bold border-2 border-gray-300 hover:border-gray-400 transition-all duration-300 transform hover:scale-105"
                   onClick={() => window.location.href = 'mailto:carl@craftthefuture.xyz'}
                 >
-                  Email Us Directly
+                  📧 Email Us Directly
                 </Button>
               </div>
-              <p className="text-sm text-gray-500 mt-4">
-                Response time: Usually within 24 hours
+              <p className="text-sm text-gray-600 mt-4">
+                ⚡ Response time: Usually within 24 hours | 💼 100% confidential
               </p>
             </div>
           </div>

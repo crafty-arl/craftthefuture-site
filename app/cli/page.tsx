@@ -52,7 +52,7 @@ export default async function CliPage() {
 
         <div className="mb-8">
           <p className="text-xl text-center mb-4">
-            Welcome to our interactive CLI browser! Type commands like <code className="bg-gray-100 px-2 py-1 rounded">help</code> to see all available commands, or try <code className="bg-gray-100 px-2 py-1 rounded">latest</code> to view recent content.
+            Welcome to our interactive CLI browser! Type commands like <code className="bg-gray-100 px-2 py-1 rounded">help</code> to see all available commands, <code className="bg-gray-100 px-2 py-1 rounded">tools</code> to launch Season 0 AI tools, or try <code className="bg-gray-100 px-2 py-1 rounded">latest</code> to view recent content.
           </p>
           <CliWrapper feedItems={feedItems} />
           <p className="text-center mt-4 text-gray-600">
@@ -68,6 +68,9 @@ export default async function CliPage() {
           <ul className="space-y-2">
             <li>
               <code className="bg-black text-green-400 px-2 py-1">help</code> - Show available commands
+            </li>
+            <li>
+              <code className="bg-black text-green-400 px-2 py-1">tools</code> - Launch Season 0 AI tools
             </li>
             <li>
               <code className="bg-black text-green-400 px-2 py-1">latest</code> - Show the most recent content

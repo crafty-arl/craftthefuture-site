@@ -75,6 +75,7 @@ function FeedCliContent({ feedItems }: FeedCliProps) {
   // Define command suggestions
   const commandSuggestions: CommandSuggestion[] = [
     { command: 'help', description: 'Show available commands', category: 'System' },
+    { command: 'tools', description: 'Launch Season 0 AI tools', category: 'Tools' },
     { command: 'latest', description: 'Show the most recent content', category: 'Content' },
     { command: 'filter [tag]', description: 'Filter content by tag', category: 'Content' },
     { command: 'tags', description: 'Show all available tags', category: 'Content' },
@@ -241,6 +242,62 @@ function FeedCliContent({ feedItems }: FeedCliProps) {
             text: `  ${suggestion.command.padEnd(15)} - ${suggestion.description}`
           }))
         ]
+      } else if (trimmedInput === "tools") {
+        commandOutput = [
+          { text: "🚀 Season 0 AI Tools - Now Live!" },
+          { text: "Launch our suite of AI-powered creative tools:" },
+          {
+            text: "→ PostGen - Generate platform-specific content ideas",
+            isLink: true,
+            href: "https://postgen.craftthefuture.xyz",
+          },
+          {
+            text: "→ MemeGen - Create viral meme captions",
+            isLink: true,
+            href: "https://memegen.craftthefuture.xyz",
+          },
+          {
+            text: "→ VibeScan - Analyze content tone & get rewrites",
+            isLink: true,
+            href: "https://vibescan.craftthefuture.xyz",
+          },
+          {
+            text: "→ HookGen - Generate engaging hooks in 25 tones",
+            isLink: true,
+            href: "https://hookgen.craftthefuture.xyz",
+          },
+          { text: "Type 'tools [name]' to launch a specific tool" },
+          { text: "Or visit the Season 0 page", isLink: true, href: "/season-0" },
+        ]
+      } else if (trimmedInput.startsWith("tools ")) {
+        const toolName = trimmedInput.substring(6).toLowerCase().trim()
+        const tools = {
+          "postgen": { name: "PostGen", url: "https://postgen.craftthefuture.xyz", description: "Content ideas generator" },
+          "memegen": { name: "MemeGen", url: "https://memegen.craftthefuture.xyz", description: "Meme caption generator" },
+          "vibescan": { name: "VibeScan", url: "https://vibescan.craftthefuture.xyz", description: "Tone analysis tool" },
+          "hookgen": { name: "HookGen", url: "https://hookgen.craftthefuture.xyz", description: "Hook generator" },
+        }
+        
+        const tool = tools[toolName as keyof typeof tools]
+        if (tool) {
+          commandOutput = [
+            { text: `🚀 Launching ${tool.name}...` },
+            { text: tool.description },
+            {
+              text: `→ Open ${tool.name}`,
+              isLink: true,
+              href: tool.url,
+            },
+            { text: "Tool will open in a new tab" },
+          ]
+        } else {
+          commandOutput = [
+            { text: `Tool "${toolName}" not found.` },
+            { text: "Available tools: postgen, memegen, vibescan, hookgen" },
+            { text: "Type 'tools' to see all tools" },
+          ]
+          isError = true
+        }
       } else if (trimmedInput === "latest") {
         // Sort by date (assuming most recent first)
         newFilteredItems = [...feedItems].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

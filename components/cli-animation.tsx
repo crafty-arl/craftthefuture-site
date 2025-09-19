@@ -25,6 +25,7 @@ export function CliAnimation() {
         "CRAFT THE FUTURE CLI v1.0.0",
         "Available commands:",
         "  craft tags     - Browse content by tags",
+        "  craft tools    - Launch Season 0 AI tools",
         "  craft feed     - Access the latest articles",
         "  craft search   - Search for specific content",
         "  craft subscribe - Subscribe to The Future Stack newsletter",
@@ -61,6 +62,18 @@ export function CliAnimation() {
         "→ Devlog: Rebuilding the Backbone — AI Agent Overhaul",
         "→ Building a personal knowledge graph with embedded vectors",
         "→ Ethical frameworks for autonomous systems",
+      ],
+    },
+    {
+      input: "craft tools",
+      output: [
+        "🚀 Season 0 AI Tools - Now Live!",
+        "Launch our suite of AI-powered creative tools:",
+        "→ PostGen - Generate platform-specific content ideas",
+        "→ MemeGen - Create viral meme captions", 
+        "→ VibeScan - Analyze content tone & get rewrites",
+        "→ HookGen - Generate engaging hooks in 25 tones",
+        "Type 'craft tools [name]' to launch a specific tool",
       ],
     },
   ]

@@ -25,18 +25,18 @@ export default async function Home() {
         {/* Clear Value Proposition */}
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
-            🚀 4 AI Tools That Will 10x Your Content Creation
+            🚀 5 AI Tools That Will 10x Your Content Creation
           </h2>
           <p className="text-lg text-gray-600 mb-6 max-w-3xl mx-auto">
-            <strong>PostGen, MemeGen, VibeScan, and HookGen</strong> - Stop struggling with writer's block. 
-            Generate viral content ideas, perfect captions, and engaging hooks in seconds, not hours.
+            <strong>PostGen, MemeGen, VibeScan, HookGen, and Campaign Wizard</strong> - Stop struggling with writer's block. 
+            Generate viral content ideas, perfect captions, engaging hooks, and complete marketing campaigns in seconds, not hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/season-0" 
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              🎯 Try All 4 Tools FREE →
+              🎯 Try All 5 Tools FREE →
             </Link>
             <Link 
               href="/feed" 
@@ -53,30 +53,36 @@ export default async function Home() {
         {/* Season 0 Tools Preview */}
         <div className="my-12">
           <h2 className="text-3xl font-bold text-center mb-8">🔥 What You Get</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:shadow-lg hover:border-green-300 transition-all duration-300 group cursor-pointer">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📝</div>
-              <h3 className="font-bold text-sm mb-1">PostGen</h3>
-              <p className="text-xs text-gray-600 mb-2">Viral content ideas</p>
-              <div className="text-xs text-green-600 font-semibold">✓ 5 platforms</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📝</div>
+              <h3 className="font-bold text-lg mb-2">PostGen</h3>
+              <p className="text-sm text-gray-600 mb-3">Generate viral content ideas for 5 platforms</p>
+              <div className="text-sm text-green-600 font-semibold">LinkedIn • TikTok • Instagram • Twitter • YouTube</div>
             </div>
             <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:shadow-lg hover:border-purple-300 transition-all duration-300 group cursor-pointer">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🖼️</div>
-              <h3 className="font-bold text-sm mb-1">MemeGen</h3>
-              <p className="text-xs text-gray-600 mb-2">Meme captions</p>
-              <div className="text-xs text-purple-600 font-semibold">✓ 3 styles</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🖼️</div>
+              <h3 className="font-bold text-lg mb-2">MemeGen</h3>
+              <p className="text-sm text-gray-600 mb-3">Create meme captions in multiple styles</p>
+              <div className="text-sm text-purple-600 font-semibold">Professional • Playful • Bold</div>
             </div>
             <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:shadow-lg hover:border-pink-300 transition-all duration-300 group cursor-pointer">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📊</div>
-              <h3 className="font-bold text-sm mb-1">VibeScan</h3>
-              <p className="text-xs text-gray-600 mb-2">Tone analysis</p>
-              <div className="text-xs text-pink-600 font-semibold">✓ 6 categories</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+              <h3 className="font-bold text-lg mb-2">VibeScan</h3>
+              <p className="text-sm text-gray-600 mb-3">AI-powered tone analysis & feedback</p>
+              <div className="text-sm text-pink-600 font-semibold">6 tone categories with emoji vibes</div>
             </div>
             <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:shadow-lg hover:border-green-300 transition-all duration-300 group cursor-pointer">
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
-              <h3 className="font-bold text-sm mb-1">HookGen</h3>
-              <p className="text-xs text-gray-600 mb-2">Engaging hooks</p>
-              <div className="text-xs text-green-600 font-semibold">✓ 25 tones</div>
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+              <h3 className="font-bold text-lg mb-2">HookGen</h3>
+              <p className="text-sm text-gray-600 mb-3">Generate engaging hooks for any topic</p>
+              <div className="text-sm text-green-600 font-semibold">25 unique tones from Professional to Zen</div>
+            </div>
+            <div className="text-center p-6 border-2 border-gray-200 rounded-lg hover:shadow-lg hover:border-blue-300 transition-all duration-300 group cursor-pointer">
+              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+              <h3 className="font-bold text-lg mb-2">Campaign Wizard</h3>
+              <p className="text-sm text-gray-600 mb-3">Complete marketing campaigns with AI</p>
+              <div className="text-sm text-blue-600 font-semibold">10+ channels • Hooks • Emails • Timeline</div>
             </div>
           </div>
           <div className="text-center">
@@ -97,7 +103,7 @@ export default async function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 my-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold">/build</h2>
             <p className="text-lg">
@@ -129,7 +135,7 @@ export default async function Home() {
         {/* Visual Browse Section - Alternative to CLI */}
         <div className="my-16">
           <h2 className="text-3xl font-bold text-center mb-8">Featured Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {featuredArticles.length > 0 ? (
               featuredArticles.map((article, index) => {
                 // Determine track based on tags or content
@@ -216,22 +222,22 @@ export default async function Home() {
         </div>
 
         {/* Sticky CTA Bar */}
-        <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-green-600 to-green-700 text-white p-4 z-50 shadow-lg">
-          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-green-600 to-green-700 text-white p-3 sm:p-4 z-50 shadow-lg">
+          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <div className="text-center sm:text-left">
-              <p className="font-bold text-lg">🚀 Ready to 10x Your Content?</p>
-              <p className="text-sm opacity-90">Join early adopters using our AI tools</p>
+              <p className="font-bold text-base sm:text-lg">🚀 Ready to 10x Your Content?</p>
+              <p className="text-xs sm:text-sm opacity-90">Join early adopters using our AI tools</p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
               <Link 
                 href="/season-0" 
-                className="bg-white text-green-600 px-6 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                className="bg-white text-green-600 px-4 sm:px-6 py-2 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center text-sm sm:text-base"
               >
                 Try Tools FREE →
               </Link>
               <Link 
                 href="/services" 
-                className="bg-green-800 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-900 transition-colors"
+                className="bg-green-800 text-white px-4 sm:px-6 py-2 rounded-lg font-bold hover:bg-green-900 transition-colors text-center text-sm sm:text-base"
               >
                 Hire Us
               </Link>
@@ -252,11 +258,11 @@ export default async function Home() {
 
 
         {/* Founder Bio Section */}
-        <div className="my-16 bg-gray-50 p-8 rounded-lg">
+        <div className="my-16 bg-gray-50 p-6 sm:p-8 rounded-lg">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Why We Built This</h2>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden mx-auto md:mx-0">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">Why We Built This</h2>
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto sm:mx-0">
                 <Image
                   src="/1749784593382.jpg"
                   alt="Carl, Founder & Chief Storyteller"
@@ -265,14 +271,14 @@ export default async function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-4">Carl, Founder & Chief Storyteller</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4">Carl, Founder & Chief Storyteller</h3>
+                <p className="text-gray-700 mb-4 text-sm sm:text-base">
                   "I started Craft The Future because I was tired of the disconnect between the tools we build and the stories we tell about them. 
                   Every line of code is a choice about the future we want to live in. We're building the operating system for future creators 
                   by combining AI tools, developer workflows, and story-driven content that actually serves the community."
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   Former tech lead turned storyteller. Building the future of creative work since 2020. 
                   <Link href="/about" className="text-black hover:underline ml-1">Learn more about our mission →</Link>
                 </p>

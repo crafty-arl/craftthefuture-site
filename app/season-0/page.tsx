@@ -1,36 +1,43 @@
 import Link from "next/link"
 import { SiteFooter } from "@/components/layout/site-footer"
-import { ExternalLink, FileText, Image, BarChart3, Target } from "lucide-react"
+import { ExternalLink, FileText, Image, BarChart3, Target, Wand2 } from "lucide-react"
 
 export default function Season0Page() {
   const tools = [
     {
       name: "PostGen",
-      description: "Never run out of post ideas! Generate fresh, platform-specific content ideas in seconds with AI for LinkedIn, TikTok, Instagram, Twitter, YouTube, and Facebook.",
+      description: "Generate viral content ideas for 5 platforms. Never run out of post ideas with AI-powered suggestions for LinkedIn, TikTok, Instagram, Twitter, and YouTube.",
       url: "https://postgen.craftthefuture.xyz",
       icon: <FileText className="w-8 h-8" />,
       color: "bg-blue-500"
     },
     {
       name: "MemeGen", 
-      description: "Turn memes into marketing magic! Upload custom memes or choose from popular templates, then get witty, viral-ready captions in 3 different styles: Professional, Playful, or Bold.",
+      description: "Create meme captions in multiple styles. Upload custom memes or choose templates, then get witty, viral-ready captions in Professional, Playful, or Bold styles.",
       url: "https://memegen.craftthefuture.xyz",
       icon: <Image className="w-8 h-8" />,
       color: "bg-purple-500"
     },
     {
       name: "VibeScan",
-      description: "AI-powered tone analysis & emoji feedback. Analyze your content's tone across 6 categories and get instant rewrites based on emoji vibes (🔥 Bold, 😒 Casual, 💡 Inspiring, 🤪 Humorous).",
+      description: "AI-powered tone analysis & feedback. Analyze your content's tone across 6 categories and get instant rewrites based on emoji vibes (🔥 Bold, 😒 Casual, 💡 Inspiring).",
       url: "https://vibescan.craftthefuture.xyz", 
       icon: <BarChart3 className="w-8 h-8" />,
       color: "bg-pink-500"
     },
     {
       name: "HookGen",
-      description: "Generate engaging hooks for any topic! Choose from 25 unique tones (Professional to Zen) and let AI create compelling, attention-grabbing hooks for your content.",
+      description: "Generate engaging hooks for any topic. Choose from 25 unique tones (Professional to Zen) and let AI create compelling, attention-grabbing hooks for your content.",
       url: "https://hookgen.craftthefuture.xyz",
       icon: <Target className="w-8 h-8" />,
       color: "bg-green-500"
+    },
+    {
+      name: "Campaign Wizard",
+      description: "Complete marketing campaigns with AI. Generate comprehensive campaigns with hooks, emails, and timelines tailored to your goals and 10+ channels.",
+      url: "https://campaignwiz.craftthefuture.xyz",
+      icon: <Wand2 className="w-8 h-8" />,
+      color: "bg-orange-500"
     }
   ]
 
@@ -45,18 +52,18 @@ export default function Season0Page() {
             <span className="text-green-600">is now Live</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-            🚀 <strong>4 AI Tools That Will Transform Your Content Creation</strong><br />
-            Stop struggling with writer's block. Generate viral content in seconds, not hours.
+            🚀 <strong>5 AI Tools That Will Transform Your Content Creation</strong><br />
+            Stop struggling with writer's block. Generate viral content and complete campaigns in seconds, not hours.
           </p>
           <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4 max-w-2xl mx-auto mb-8">
             <p className="text-green-800 font-semibold">
-              ⚡ Join 500+ creators already using these tools to 10x their content output
+              ⚡ Join early adopters using these tools to 10x their content output
             </p>
           </div>
         </div>
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
           {tools.map((tool, index) => (
             <div 
               key={tool.name}
@@ -111,7 +118,7 @@ export default function Season0Page() {
         {/* Features Section */}
         <div className="my-16">
           <h2 className="text-3xl font-bold text-center mb-8">What Makes These Tools Special</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FileText className="w-8 h-8 text-blue-600" />

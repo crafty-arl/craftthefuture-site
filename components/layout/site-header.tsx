@@ -77,10 +77,11 @@ export function SiteHeader() {
   }, [])
 
   const season0Tools = [
-    { name: "PostGen", url: "https://postgen.craftthefuture.xyz", description: "Content ideas" },
+    { name: "PostGen", url: "https://postgen.craftthefuture.xyz", description: "Viral content ideas" },
     { name: "MemeGen", url: "https://memegen.craftthefuture.xyz", description: "Meme captions" },
     { name: "VibeScan", url: "https://vibescan.craftthefuture.xyz", description: "Tone analysis" },
     { name: "HookGen", url: "https://hookgen.craftthefuture.xyz", description: "Engaging hooks" },
+    { name: "Campaign Wizard", url: "https://campaignwiz.craftthefuture.xyz", description: "Complete campaigns" },
   ]
 
   const navItems = [
@@ -175,14 +176,12 @@ export function SiteHeader() {
               CLI
             </button>
 
-            <a
-              href="https://buildbycraftthefuture.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/newsletter"
               className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-black hover:underline"
             >
               Newsletter
-            </a>
+            </Link>
             
             <Link href="/services">
               <Button className="bg-green-600 text-white hover:bg-green-700 font-semibold">
@@ -253,15 +252,13 @@ export function SiteHeader() {
                 <Terminal className="w-4 h-4" />
                 <span>CLI Terminal</span>
               </button>
-              <a
-                href="https://buildbycraftthefuture.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/newsletter"
                 className="block p-4 hover:bg-gray-50 border-b border-gray-200"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Newsletter
-              </a>
+              </Link>
             </div>
 
             {/* CTA */}

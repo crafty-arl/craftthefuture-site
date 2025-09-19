@@ -109,11 +109,11 @@ export default function About() {
           </div>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">What Makes Us Different</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
             <div className="border border-gray-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-3">🚀 AI Tools First</h3>
               <p className="text-sm text-gray-700">
-                Our proprietary AI tools (PostGen, MemeGen, VibeScan, HookGen) are always accessible and front-and-center, 
+                Our proprietary AI tools (PostGen, MemeGen, VibeScan, HookGen, Campaign Wizard) are always accessible and front-and-center, 
                 not hidden behind services. We believe in productizing creativity.
               </p>
             </div>

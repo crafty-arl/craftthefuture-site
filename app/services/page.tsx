@@ -33,6 +33,13 @@ export default function Services() {
       features: ["25 tone options", "Engagement optimization", "Multiple formats", "Instant generation"],
       link: "https://hookgen.craftthefuture.xyz/",
       icon: "🎯"
+    },
+    {
+      name: "Campaign Wizard",
+      description: "Generate comprehensive marketing campaigns with AI-powered hooks, emails, and timelines tailored to your goals and channels.",
+      features: ["10+ marketing channels", "Complete campaign plans", "Email sequences", "Timeline & analytics"],
+      link: "https://campaignwiz.craftthefuture.xyz/",
+      icon: "🎯"
     }
   ]
 
@@ -44,6 +51,7 @@ export default function Services() {
         "Custom PostGen templates for your brand voice",
         "Automated VibeScan integration for quality control", 
         "HookGen API integration for social media",
+        "Campaign Wizard integration for complete marketing campaigns",
         "Workflow automation and documentation"
       ],
       outcomes: "10x content production speed while maintaining quality and brand consistency"
@@ -123,13 +131,13 @@ export default function Services() {
         <h1 className="text-4xl md:text-5xl font-bold mb-8">Services</h1>
 
         <div className="prose max-w-none">
-          <h2 className="text-2xl font-bold mt-8 mb-4">🚀 Our AI-Powered Tools (Free to Use)</h2>
+          <h2 className="text-2xl font-bold mt-8 mb-4">🚀 Our 5 AI-Powered Tools (Free to Use)</h2>
           <p className="text-xl mb-6">
             Start with our proprietary AI tools that 10x content creation. Each tool is immediately accessible 
             and designed to enhance your creativity without replacing the human element.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-8">
             {aiTools.map((tool, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-4">
@@ -139,14 +147,15 @@ export default function Services() {
                 <p className="text-gray-700 mb-4">{tool.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="font-semibold mb-2">Features:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-semibold mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
                     {tool.features.map((feature, i) => (
-                      <span key={i} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
+                      <li key={i} className="flex items-center">
+                        <span className="text-green-500 mr-2">✓</span>
                         {feature}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
                 
                 <a 
@@ -167,7 +176,7 @@ export default function Services() {
             We don't just provide tools—we build the operating system for future creators.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 my-12">
+          <div className="grid grid-cols-1 gap-8 my-12">
             {automationServices.map((service, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
@@ -194,7 +203,7 @@ export default function Services() {
             builder-first narrative that resonates with technical audiences.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 my-12">
+          <div className="grid grid-cols-1 gap-8 my-12">
             {traditionalServices.map((service, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>

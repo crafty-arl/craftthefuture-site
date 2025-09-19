@@ -46,7 +46,7 @@ export default async function Home() {
             </Link>
           </div>
           <p className="text-sm text-gray-500 mt-3">
-            ⚡ Join 500+ creators already using these tools
+            ⚡ Join early adopters using these tools
           </p>
         </div>
 
@@ -89,11 +89,11 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* CLI Animation */}
+        {/* Content Preview */}
         <div className="my-8">
           <CliAnimation />
           <p className="text-center mt-4 text-gray-600">
-            Try our interactive CLI in the <Link href="/feed" className="underline hover:text-black">Feed</Link> or <Link href="/cli" className="underline hover:text-black">CLI Browser</Link> to explore our content.
+            Explore our content in the <Link href="/feed" className="underline hover:text-black">Feed</Link> or <Link href="/cli" className="underline hover:text-black">CLI Browser</Link>.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default async function Home() {
         <div className="my-16 text-center bg-gradient-to-r from-gray-50 to-gray-100 p-8 rounded-xl border-2 border-gray-200">
           <h2 className="text-3xl font-bold mb-4">📧 Don't Miss Out</h2>
           <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-            Join <strong>500+ builders and creators</strong> getting weekly insights on AI tools, 
+            Join <strong>builders and creators</strong> getting weekly insights on AI tools, 
             dev culture, and the future of creative work.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -209,8 +209,9 @@ export default async function Home() {
 
         <div className="mt-16 mb-8 text-center">
           <p className="text-xl max-w-2xl mx-auto">
-            A story-forward content studio for people building tomorrow. We don't just ship tools — we document the
-            process, question the systems, and imagine what could be.
+            A hybrid content-tech product studio building the operating system for future creators. We don't just ship tools — we document the
+            process, question the systems, and imagine what could be. Through AI-powered content creation, builder-first narratives, 
+            and story-driven feeds, we're creating the future of creative work.
           </p>
         </div>
 
@@ -219,7 +220,7 @@ export default async function Home() {
           <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-center sm:text-left">
               <p className="font-bold text-lg">🚀 Ready to 10x Your Content?</p>
-              <p className="text-sm opacity-90">Join 500+ creators using our AI tools</p>
+              <p className="text-sm opacity-90">Join early adopters using our AI tools</p>
             </div>
             <div className="flex gap-3">
               <Link 
@@ -268,11 +269,11 @@ export default async function Home() {
                 <h3 className="text-xl font-semibold mb-4">Carl, Founder & Chief Storyteller</h3>
                 <p className="text-gray-700 mb-4">
                   "I started Craft The Future because I was tired of the disconnect between the tools we build and the stories we tell about them. 
-                  Every line of code is a choice about the future we want to live in. We document that process, question the systems, 
-                  and imagine what could be."
+                  Every line of code is a choice about the future we want to live in. We're building the operating system for future creators 
+                  by combining AI tools, developer workflows, and story-driven content that actually serves the community."
                 </p>
                 <p className="text-sm text-gray-600">
-                  Former tech lead turned storyteller. Building in public since 2020. 
+                  Former tech lead turned storyteller. Building the future of creative work since 2020. 
                   <Link href="/about" className="text-black hover:underline ml-1">Learn more about our mission →</Link>
                 </p>
               </div>

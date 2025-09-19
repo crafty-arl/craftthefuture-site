@@ -46,7 +46,8 @@ export default function About() {
         <div className="prose max-w-none">
           <h2 className="text-2xl font-bold mt-8 mb-4">Brand Positioning</h2>
           <p className="text-xl mb-6">
-            Craft The Future is a story-forward content studio for people building tomorrow across three creative lanes:
+            Craft The Future is a hybrid content-tech product studio building the operating system for future creators. 
+            We combine proprietary AI tools, developer-centered workflows, and story-driven content across three creative lanes:
           </p>
           <ul className="mb-6 space-y-2">
             <li>
@@ -61,8 +62,8 @@ export default function About() {
           </ul>
           <p className="mb-6">
             We don't just ship tools — we document the process, question the systems, and imagine what could be. Through
-            devlogs, essays, and speculative drops, Craft The Future is a creative engine for those who make, shift, and
-            dream in public.
+            AI-powered content creation, interactive CLI experiences, devlogs, essays, and speculative drops, Craft The Future 
+            is a creative engine for those who make, shift, and dream in public.
           </p>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Target Audience</h2>
@@ -105,6 +106,38 @@ export default function About() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <h2 className="text-2xl font-bold mt-8 mb-4">What Makes Us Different</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-3">🚀 AI Tools First</h3>
+              <p className="text-sm text-gray-700">
+                Our proprietary AI tools (PostGen, MemeGen, VibeScan, HookGen) are always accessible and front-and-center, 
+                not hidden behind services. We believe in productizing creativity.
+              </p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-3">🎨 Unique Content Formats</h3>
+              <p className="text-sm text-gray-700">
+                We create content in formats that resonate with builders: devlogs, technical essays, 
+                and speculative stories that document the process of building the future.
+              </p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-3">📖 Builder-First Narrative</h3>
+              <p className="text-sm text-gray-700">
+                We document "the process, the systems, and the dreams" to create a digital builder's zine 
+                that serves as both content and community.
+              </p>
+            </div>
+            <div className="border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold mb-3">🎯 Track Segmentation</h3>
+              <p className="text-sm text-gray-700">
+                Clear creative lanes help users self-select: /build (technical), /govern (systems/ethics), 
+                /dream (stories/speculative). Each track has its own voice and purpose.
+              </p>
+            </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-8 mb-4">Voice & Aesthetic</h2>
